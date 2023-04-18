@@ -2,8 +2,6 @@ import axios from "axios";
 
 import { useState, useEffect } from "react";
 
-
-
 import {
   getAppointmentsForDay,
   getInterviewersForDay,
@@ -23,22 +21,27 @@ export default function useApplicationData() {
   const setDay = (day) => setState({ ...state, day });
 
   useEffect(() => {
-    const daysUrl = "http://localhost:8001/api/days";
-    const appointmentsUrl = "http://localhost:8001/api/appointments";
-    const interviewersUrl = "http://localhost:8001/api/interviewers";
+    const daysUrl = "/api/days";
+    const appointmentsUrl = "/api/appointments";
+    const interviewersUrl = "/api/interviewers";
     Promise.all([
       axios.get(daysUrl),
       axios.get(appointmentsUrl),
       axios.get(interviewersUrl),
     ]).then((all) => {
+      const [days, appointments, interviewers] = all;
+      console.log("days", days);
+      console.log("appointments", appointments);
+      console.log("interviewers", interviewers);
       setState((prev) => ({
         ...prev,
-        days: all[0].data,
-        appointments: all[1].data,
-        interviewers: all[2].data,
+        days: days.data,
+        appointments: appointments.data,
+        interviewers: interviewers.data,
       }));
     });
   }, []);
+
 
   function bookInterview(id, interview) {
     const appointment = {
@@ -51,14 +54,14 @@ export default function useApplicationData() {
     };
     setState({ ...state, appointments });
     return axios.put(
-      `http://localhost:8001/api/appointments/${id}`,
+      `/api/appointments/${id}`,
       { interview }
     );
   }
-
+ 
   const cancelInterview = (id, interview) => {
     return axios
-      .delete(`http://localhost:8001/api/appointments/${id}`, { data: interview })
+      .delete(`/api/appointments/${id}`, { data: interview })
       .then(() => {
         const appointment = {
           ...state.appointments[id],
