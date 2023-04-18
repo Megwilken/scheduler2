@@ -38,8 +38,6 @@ export default function Appointment(props) {
     transition(CREATE);
   };
 
-
-
   const update = (name, interviewer) => {
     transition(SAVING);
     const newInterview = {
@@ -92,7 +90,7 @@ export default function Appointment(props) {
   }, [props.interview, transition, mode]);
 
   return (
-    <article className="appointment">
+    <article className="appointment" data-testid="appointment">
       <Header time={props.time} />
       {mode === EMPTY && <Empty onAdd={onAdd} />}
       {mode === SHOW && (
@@ -101,6 +99,7 @@ export default function Appointment(props) {
           interviewer={props.interview.interviewer.name}
           onDelete={() => transition(CONFIRM)}
           onEdit={() => transition (EDIT)}
+         
         />
       )}
       {mode === CREATE && (
@@ -124,7 +123,6 @@ export default function Appointment(props) {
         <Form
           defaultName={props.interview.student}
           defaultInterviewer={props.interview.interviewer.id}
-
           interviewers={props.interviewers}
           onCancel={back}
           onSave={update}
