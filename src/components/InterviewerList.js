@@ -16,15 +16,17 @@ export default function InterviewerList(props) {
       />
     );
   });
-  InterviewerList.propTypes = {
-    interviewers: PropTypes.array.isRequired
-  };
       return (
     <section className="interviewers">
-      <h4 className="interviewers__header text--light">Interviewer</h4>
+      <h4 className="interviewers__header text--light">Interviewers</h4>
       <ul className="interviewers__list">
        {interviewers}
       </ul>
     </section>
   );
+  
 }
+InterviewerList.propTypes = {
+  value: PropTypes.number,
+  onChange: PropTypes.func.isRequired
+};

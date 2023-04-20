@@ -13,8 +13,8 @@ const fixtures = {
       appointments: [3, 4],
       interviewers: [3, 4],
       spots: 1
-    }
-  ],
+    },
+         ],
   appointments: {
     "1": { id: 1, time: "12pm", interview: null },
     "2": {
