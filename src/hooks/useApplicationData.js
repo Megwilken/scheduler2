@@ -60,7 +60,7 @@ export default function useApplicationData() {
     if (!state.appointments[id].interview) {
       day = {
         ...state.days[dayOfWeek],
-        spots: state.days[dayOfWeek].spots,
+        spots: state.days[dayOfWeek].spots -1,
       };
     } else {
       day = {
