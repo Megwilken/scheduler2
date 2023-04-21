@@ -20,9 +20,13 @@ import "components/DayListItem.scss";
         "day-list__item--full": !props.spots,
       });
   return (
-    <li className={dayClass} selected={props.selected} onClick={() => props.setDay(props.name)} data-testid="day">
+    <li className={dayClass} 
+        selected={props.selected} 
+        onClick={() => props.setDay(props.name)} 
+        data-testid="day"
+    >
       <h2 className="text--regular">{props.name}</h2> 
-      <h3 className="text--light">{availability}</h3>
+      <h3 className="text--light">{formatSpots(props.spots)}</h3>
     </li>
   );
   }
