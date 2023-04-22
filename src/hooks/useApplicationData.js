@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 import axios from "axios";
 
 export default function useApplicationData() {
@@ -60,14 +59,14 @@ export default function useApplicationData() {
     if (!state.appointments[id].interview) {
       day = {
         ...state.days[dayOfWeek],
-        spots: state.days[dayOfWeek].spots -1,
+        spots: state.days[dayOfWeek].spots - 1,
       };
     } else {
       day = {
         ...state.days[dayOfWeek],
-        spots: state.days[dayOfWeek].spots -1,
+        spots: state.days[dayOfWeek].spots - 1,
+      };
     }
-  }
 
     let days = [...state.days];
     days[dayOfWeek] = day;
@@ -92,7 +91,7 @@ export default function useApplicationData() {
 
     const day = {
       ...state.days[dayOfWeek],
-      spots: state.days[dayOfWeek].spots +1,
+      spots: state.days[dayOfWeek].spots + 1,
     };
 
     let days = state.days;
