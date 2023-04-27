@@ -4,7 +4,7 @@ import classNames from "classnames";
 import "components/DayListItem.scss";
 
 const formatSpots = (spots) => {
-  if (!spots) {
+  if (spots < 1) {
     return "no spots remaining";
   }
   if (spots === 1) {
