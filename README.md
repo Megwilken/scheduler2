@@ -18,8 +18,8 @@ Saving Appointment
 Delete Appointment Confirmation
 !["Delete Appointment Confirmation"](https://github.com/Megwilken/scheduler2/blob/8d98adb04608d3e934fc7ae449104b8b6c17f04b/public/images/deleteconf.png)
 
-Delete Appointment Confirmation
-!["Delete Appointment Confirmation"](https://github.com/Megwilken/scheduler2/blob/8d98adb04608d3e934fc7ae449104b8b6c17f04b/public/images/delete.png)
+Delete Appointment 
+!["Delete Appointment"](https://github.com/Megwilken/scheduler2/blob/8d98adb04608d3e934fc7ae449104b8b6c17f04b/public/images/delete.png)
 
 ## Setup
 
