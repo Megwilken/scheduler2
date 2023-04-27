@@ -30,20 +30,19 @@ Interview Scheduler is a single-page application (SPA) that allows users to book
 ## Screenshots
 
 Main Appointment Page
-!["Main Appointment Page"](
+!["Main Appointment Page"](https://github.com/Megwilken/scheduler2/blob/8d98adb04608d3e934fc7ae449104b8b6c17f04b/public/images/main.png)
 
 Create Appointment
-!["Create Appointment"](
+!["Create Appointment"](https://github.com/Megwilken/scheduler2/blob/8d98adb04608d3e934fc7ae449104b8b6c17f04b/public/images/delete.png)
 
 Saving Appointment
-!["Saving Appointment"](
+!["Saving Appointment"](https://github.com/Megwilken/scheduler2/blob/8d98adb04608d3e934fc7ae449104b8b6c17f04b/public/images/saving.png)
 
 Delete Appointment Confirmation
-!["Delete Appointment Confirmation"](
+!["Delete Appointment Confirmation"](https://github.com/Megwilken/scheduler2/blob/8d98adb04608d3e934fc7ae449104b8b6c17f04b/public/images/deleteconf.png)
 
 Delete Appointment Confirmation
-!["Delete Appointment Confirmation"](
-
+!["Delete Appointment Confirmation"](https://github.com/Megwilken/scheduler2/blob/8d98adb04608d3e934fc7ae449104b8b6c17f04b/public/images/delete.png)
 
 ## Setup
 
