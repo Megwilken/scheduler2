@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+// take in the initial state and return an object with the state and the setDay function
 export default function useApplicationData() {
   const [state, setState] = useState({
     day: "Monday",
@@ -40,6 +41,7 @@ export default function useApplicationData() {
     return daysOfWeek[day];
   }
 
+  // update the state with the new appointment and update the spots remaining for the day
   function bookInterview(id, interview) {
     const appointment = {
       ...state.appointments[id],
@@ -49,6 +51,7 @@ export default function useApplicationData() {
       ...state.appointments,
       [id]: appointment,
     };
+
 
     const dayOfWeek = findDay(state.day);
     let day = {
@@ -77,6 +80,7 @@ export default function useApplicationData() {
     });
   }
 
+  // update the state with the deleted appointment and update the spots remaining for the day 
   const cancelInterview = (id) => {
     const appointment = {
       ...state.appointments[id],
