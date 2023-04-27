@@ -39,10 +39,10 @@ export default function Form(props) {
         <form onSubmit={(event) => event.preventDefault()} alt="Add">
           <input
             className="appointment__create-input text--semi-bold"
-            onChange={(event) => {
+             value={name}
+             onChange={(event) => {
               setName(event.target.value);
             }}
-            value={name}
             name="name"
             type="text"
             placeholder="Enter Student Name"
