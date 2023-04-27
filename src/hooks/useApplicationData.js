@@ -52,7 +52,6 @@ export default function useApplicationData() {
       [id]: appointment,
     };
 
-
     const dayOfWeek = findDay(state.day);
     let day = {
       ...state.days[dayOfWeek],
@@ -80,7 +79,7 @@ export default function useApplicationData() {
     });
   }
 
-  // update the state with the deleted appointment and update the spots remaining for the day 
+  // update the state with the deleted appointment and update the spots remaining for the day
   const cancelInterview = (id) => {
     const appointment = {
       ...state.appointments[id],
