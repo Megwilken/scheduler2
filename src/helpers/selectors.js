@@ -1,3 +1,4 @@
+// map through the days array and find the day that matches the day name
 export function getAppointmentsForDay(state, day) {
   const dayObj = state.days.find((dayObj) => dayObj.name === day);
   if (!dayObj) {
@@ -7,6 +8,7 @@ export function getAppointmentsForDay(state, day) {
   return appointments;
 }
 
+// map through the interviewers array and find the interviewer that matches the interviewer name
 export function getInterviewersForDay(state, name) {
   const dayObj = state.days.find((dayObj) => dayObj.name === name);
   if (!dayObj || !Array.isArray(dayObj.interviewers)) {
@@ -21,6 +23,7 @@ export function getInterviewersForDay(state, name) {
   return interviewObj;
 }
 
+// return an object with the student name and interviewer object
 export function getInterview(state, interview) {
   if (!interview) {
     return null;
